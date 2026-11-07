@@ -284,7 +284,7 @@ def gdb_version_check(formatter: StatusLineFormatter) -> bool:
     if "Python scripting is not supported in this copy of GDB" in gdb_version_output:
         formatter.error("fail (GDB version does not support Python scripting)")
         return False
-    m = re.search(r"GNU gdb\s+.*?(\d+\.\d+(\.[\da-z-]+)+)", gdb_version_output)
+    m = re.search(r"GNU gdb\s+.*?(\d+\.\d+(\.[\da-z-]+)*)", gdb_version_output)
     if m is None:
         formatter.error("failed to determine gdb version")
         formatter.append_output(gdb_version_output)
