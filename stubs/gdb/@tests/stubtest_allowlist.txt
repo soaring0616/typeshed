@@ -29,7 +29,6 @@ gdb.TuiWindow
 gdb.command
 gdb.command.explore
 gdb.command.frame_filters
-gdb.command.missing_debug
 gdb.command.pretty_printers
 gdb.command.prompt
 gdb.command.type_printers
@@ -55,7 +54,6 @@ gdb.prompt.prompt_substitutions
 
 # internal module to register a printer for mpx_bound128 type
 gdb.printer
-gdb.printer.bound_registers
 
 gdb.printing.RegexpCollectionPrettyPrinter.RegexpSubprinter
 gdb.printing.add_builtin_pretty_printer
@@ -74,10 +72,9 @@ gdb.Progspace.xmethods
 # stubtest thinks this can't be sub-classed at runtime, but it is
 gdb.disassembler.DisassemblerPart
 
-gdb.TuiEnabledEvent
-gdb.events.tui_enabled
+# internal sequence type returned by btrace recordings (e.g. Record.instruction_history)
+gdb.BtraceObjectList
 
-gdb.Progspace.missing_debug_handlers
-gdb.missing_debug_handlers
-gdb.missing_files
-gdb.missing_objfile
+# internal compatibility wrappers around str.isalnum() and str.isascii()
+gdb.missing_files.isalnum
+gdb.missing_files.isascii
