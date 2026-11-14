@@ -409,8 +409,13 @@ class RecordInstruction(Instruction):
 
 class RecordGap(Instruction):
     number: int
-    error_code: int
-    error_string: str
+    reason_code: int
+    reason_string: str
+
+@final
+class RecordAuxiliary:
+    number: int
+    data: str
 
 class RecordFunctionSegment:
     number: int
@@ -498,6 +503,7 @@ class Function:
 
 def current_progspace() -> Progspace | None: ...
 def progspaces() -> Sequence[Progspace]: ...
+
 missing_file_handlers: Sequence[tuple[Literal["debug"], MissingDebugHandler] | tuple[Literal["file"], MissingFileHandler]]
 
 @final
