@@ -498,6 +498,7 @@ class Function:
 
 def current_progspace() -> Progspace | None: ...
 def progspaces() -> Sequence[Progspace]: ...
+missing_file_handlers: Sequence[tuple[Literal["debug"], MissingDebugHandler] | tuple[Literal["file"], MissingFileHandler]]
 
 @final
 class Progspace:
