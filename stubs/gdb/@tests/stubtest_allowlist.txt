@@ -74,3 +74,7 @@ gdb.disassembler.DisassemblerPart
 
 # internal sequence type returned by btrace recordings (e.g. Record.instruction_history)
 gdb.BtraceObjectList
+
+# internal compatibility wrappers around str.isalnum() and str.isascii()
+gdb.missing_files.isalnum
+gdb.missing_files.isascii
