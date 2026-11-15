@@ -29,6 +29,7 @@ gdb.TuiWindow
 gdb.command
 gdb.command.explore
 gdb.command.frame_filters
+gdb.command.missing_files
 gdb.command.pretty_printers
 gdb.command.prompt
 gdb.command.type_printers
@@ -78,3 +79,29 @@ gdb.BtraceObjectList
 # internal compatibility wrappers around str.isalnum() and str.isascii()
 gdb.missing_files.isalnum
 gdb.missing_files.isascii
+
+# Added in GDB 17, but the stubs are for GDB 16.3
+gdb.COLORSPACE_AIXTERM_16COLOR
+gdb.COLORSPACE_ANSI_8COLOR
+gdb.COLORSPACE_MONOCHROME
+gdb.COLORSPACE_RGB_24BIT
+gdb.COLORSPACE_XTERM_256COLOR
+gdb.Color
+gdb.PARAM_COLOR
+gdb.ParameterPrefix
+gdb.Value.is_unavailable
+gdb.dap.completions
+gdb.dap.server.DeferredRequest.defer_events
+gdb.dap.server.Server.emit_pending_events
+gdb.dap.server.Server.set_defer_events
+gdb.dap.server.export_column
+gdb.dap.server.import_column
+
+# Removed or changed in GDB 17, but the stubs are for GDB 16.3
+gdb.dap.server.Server.send_event
+gdb.dap.server.Server.send_event_later
+gdb.dap.server.request
+
+# TODO: add stubs for these modules
+gdb.dap.globalvars
+gdb.ptwrite
